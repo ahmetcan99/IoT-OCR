@@ -1,4 +1,4 @@
-# 🌐 IoT-OCR Edge Processing System
+# 🌐 IoT-OCR Hybrid System
 **ESP32-based image capture → Raspberry Pi OCR processing → FastAPI/SQLite storage**  
 
 ## 🔥 Key Features
