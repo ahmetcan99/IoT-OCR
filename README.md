@@ -1,19 +1,19 @@
-# 🌐 IoT-OCR Hybrid System
+# IoT-OCR Hybrid System
 **ESP32-based image capture → Raspberry Pi OCR processing → FastAPI/SQLite storage**  
 
-## 🔥 Key Features
+## Key Features
 - **ESP32-CAM** image capture with **SPI flash config** (WiFi/UUID management via `config.json`)
 - **OpenCV** preprocessing (perspective correction + CLAHE contrast enhancement)
 - **Tesseract-OCR**
 - **MQTT** for remote configuration updates (no firmware reflash needed)
 - **FastAPI** backend with SQLite logging
 
-## 🔮 Future Improvements
+## Future Improvements
 - **Planned UART/I2C Integration**: Designed for high-speed ESP32↔RPi communication, but currently uses WiFi due to time constraints.  
   - *Protocol specs ready*: 8Mbps UART (TX/RX pins) + I2C (for control signals)  
   - *Blockers*: Hardware synchronization challenges (will implement in v2.0)  
 
-## 🛠️ Tech Stack
+##  Tech Stack
 | Component       | Technologies Used                      |
 |-----------------|----------------------------------------|
 | **Edge Device** | ESP32 (C++), SPI Flash, FreeRTOS       |
@@ -22,13 +22,13 @@
 | **Comms**       | MQTT (config), RESTful API (image data)|
 | **Database**    | SQLite with UUID-based record tagging  |
 
-## ⚡ Quick Start
+##  Quick Start
 ### Prerequisites
 - ESP32-CAM module
 - Raspberry Pi 4 (2GB+ RAM recommended)
 - Python 3.9 on Pi
 
-## 📂 Project Structure
+##  Project Structure
 ```bash
 IoT-OCR/
 ├── esp32-code-main/          # ESP32 PlatformIO Project
@@ -50,7 +50,7 @@ IoT-OCR/
 │   ├── main.py             # Entry point
 │   └── requirements.txt    # Python dependencies
 ```
-## ⚡ Installation
+##  Installation
 
 ### **ESP32 Setup**
 1. **Install Required Tools**:
@@ -95,7 +95,7 @@ cd raspberrypi-gateway-main
 pip install -r requirements.txt  # Installs dependencies
 python main.py  # Starts server at https://localhost:8000
 ```
-## 🔧 Critical Configuration Notes
+##  Critical Configuration Notes
 Mandatory Changes: 
   Replace YOUR_WIFI_SSID and YOUR_WIFI_PASSWORD with your network credentials
   Update server_name and mqtt_server IPs if Raspberry Pi uses a different address
